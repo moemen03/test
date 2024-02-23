@@ -9,10 +9,10 @@ import Products from './component/Products/Products.jsx';
 import Wishlist from './component/Wishlist/Wishlist.jsx';
 import Home from './component/Home/Home.jsx'; 
 import NotFound from './component/NotFound/NotFound.jsx';
-import { RouterProvider, createBrowserRouter } from 'react-router-dom'
+import { RouterProvider, createBrowserRouter, createHashRouter } from 'react-router-dom'
 
 export default function App(){
-  let routers = createBrowserRouter([
+  let routers = createHashRouter([
     {path: '' , element :<Layout/> , children:[
       {index: true , element :<Register/>},
       {path: 'cart' , element :<Cart/>},
